@@ -6,7 +6,7 @@
 #    By: tbruinem <tbruinem@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/03/19 18:02:35 by tbruinem      #+#    #+#                  #
-#    Updated: 2021/04/26 11:40:38 by tbruinem      ########   odam.nl          #
+#    Updated: 2021/04/28 13:54:14 by tbruinem      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ SRC =	util/util_atoi.c \
 		util/util_strdup.c \
 		util/util_memcpy.c \
 		util/util_memcmp.c \
+		util/util_memmove.c \
 		util/util_memdup.c \
 		util/util_strncmp.c \
 		util/util_strnlen.c \
