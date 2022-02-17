@@ -6,14 +6,14 @@
 /*   By: tbruinem <tbruinem@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/07/04 11:15:59 by tbruinem      #+#    #+#                 */
-/*   Updated: 2021/04/26 11:44:04 by tbruinem      ########   odam.nl         */
+/*   Updated: 2022/02/17 16:30:12 by tbruinem      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "vector.h"
 #include <stdlib.h>
 
-int		vec_nullterm(t_vec *vec)
+int		vec_nullterm(Vector *vec)
 {
 	static const char nulls[sizeof(void *)];
 
@@ -23,7 +23,7 @@ int		vec_nullterm(t_vec *vec)
 	return (1);
 }
 
-int		vec_realloc(t_vec *vec, size_t amount)
+int		vec_realloc(Vector *vec, size_t amount)
 {
 	char	*realloc_data;
 
@@ -51,7 +51,7 @@ int		vec_realloc(t_vec *vec, size_t amount)
 **		index	index+amount
 */
 
-int		vec_insert(t_vec *vec, void *buff, size_t amount, size_t index)
+int		vec_insert(Vector *vec, void *buff, size_t amount, size_t index)
 {
 	if (!vec_realloc(vec, amount))
 		return (0);
@@ -64,7 +64,7 @@ int		vec_insert(t_vec *vec, void *buff, size_t amount, size_t index)
 	return (1);
 }
 
-int		vec_add(t_vec *vec, void *buff, size_t amount)
+int		vec_add(Vector *vec, void *buff, size_t amount)
 {
 	if (!vec_realloc(vec, amount))
 		return (0);
